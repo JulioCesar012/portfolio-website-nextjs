@@ -8,11 +8,23 @@ export default {
   `,
   HeroContent: styled.div`
     padding-top: ${space[6]}px;
+
+    @media only screen and (max-width: 992px) {
+      padding-top: 0;
+    }
   `,
-  TitleContent: styled.h2``,
+  TitleContent: styled.h2`
+    @media only screen and (max-width: 992px) {
+      font-size: 1.4rem;
+    }
+  `,
   Tech: styled.h5`
     color: ${colors["cinza/neutral"]};
     font-weight: 400;
+
+    @media only screen and (max-width: 992px) {
+      font-size: 1.1rem;
+    }
   `,
   SummaryText: styled.p`
     font-weight: 600;
@@ -51,7 +63,17 @@ export default {
 
     img {
       border-radius: ${space[4]}px ${space[1]}px ${space[4]}px ${space[1]}px;
+
+      @media only screen and (max-width: 992px) {
+        width: 250px !important;
+        height: 250px !important;
+      }
     }
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+      margin-top: ${space[6]}px;
+}
   `,
   HeroSkills: styled.div`
     text-align: left;
@@ -64,10 +86,29 @@ export default {
     border-radius: 5px;
     background: ${colors["background/cinza"]};
     z-index: 10;
+
+    @media only screen and (max-width: 992px) {
+      width: 90px;
+      padding: 10px;
+      left: 5%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      left: 15%;
+    }
+
+    @media only screen and (max-width: 576px) {
+      display: none;
+    }
   `,
   LabelSkills: styled.h6`
     background: ${colors["transparent"]};
     color: ${colors["white/neutral-0"]};
+
+    @media only screen and (max-width: 992px) {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+    }
   `,
   BarIcon: styled.span`
     background: ${colors["transparent"]};
@@ -75,6 +116,10 @@ export default {
     i {
       color: ${colors["verde-claro"]};
       background: ${colors["transparent"]};
+      @media only screen and (max-width: 992px) {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+      }
     }
   `,
   HeroExperience: styled.div`
@@ -89,6 +134,19 @@ export default {
     display: flex;
     align-items: center;
     gap: 3;
+
+    @media only screen and (max-width: 992px) {
+      padding: ${space[1]}px;
+      width: 115px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      right: 20%;
+    }
+
+    @media only screen and (max-width: 576px) {
+      display: none;
+    }
   `,
   FlashIcon: styled.span`
     margin-right: ${space[1]}px;
@@ -100,6 +158,10 @@ export default {
       background: ${colors["background/flash-icon"]};
       border-radius: 5px;
     }
+
+    @media only screen and (max-width: 992px) {
+      font-size: 0.8rem;
+    }
   `,
   ContentHeroExperience: styled.div`
     background: ${colors["transparent"]};
@@ -109,10 +171,18 @@ export default {
     font-weight: 400;
     font-size: 0.8rem;
     background: ${colors["transparent"]};
+
+    @media only screen and (max-width: 992px) {
+      font-size: 0.7rem;
+    }
   `,
   LabelYears: styled.h5`
     font-weight: 600;
     background: ${colors["transparent"]};
     margin-bottom: 0;
+
+    @media only screen and (max-width: 992px) {
+      font-size: 0.9rem;
+    }
   `,
 };

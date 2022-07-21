@@ -3,29 +3,7 @@ import S from "./styles";
 import Link from "next/link";
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-
-const NAV_LINK = [
-  {
-    path: "/",
-    display: "Home",
-  },
-  {
-    path: "#about",
-    display: "About",
-  },
-  {
-    path: "#services",
-    display: "Services",
-  },
-  {
-    path: "#portfolio",
-    display: "Portfolio",
-  },
-  {
-    path: "#contact",
-    display: "Contact",
-  },
-];
+import { NAV_LINK } from "~/utils";
 
 const Footer = () => {
   const date = new Date();
@@ -35,7 +13,7 @@ const Footer = () => {
     <S.Footer>
     <Container>
       <Row>
-        <Col lg={6}>
+        <Col lg={6} className="footer_top">
           <S.NavMenu>
             {NAV_LINK.map((item, index) => (
               <Link href={item.path} key={index}>
@@ -45,7 +23,7 @@ const Footer = () => {
           </S.NavMenu>
         </Col>
 
-        <Col lg={6}>
+        <Col lg={6} className="footer_top">
           <S.FooterCreator>
             <S.WebsiteCreator>Created by Julio F.</S.WebsiteCreator>
           </S.FooterCreator>

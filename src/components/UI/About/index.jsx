@@ -2,19 +2,16 @@ import S from "./styles";
 import { Col, Container, Row } from "reactstrap";
 import SectionSubtitle from "../SectionSubtitle";
 import Link from "next/link";
-import Image from "next/image";
 
-import img1 from '~/assets/images/img-01.jpg';
-import img2 from '~/assets/images/img-02.jpg';
-import img3 from '~/assets/images/img-03.jpg';
-import img4 from '~/assets/images/hero.jpeg';
+const About = (aboutProps) => {
+  const { skills, aboutme } = aboutProps;
+  const { about, aboutImgCard1, aboutImgCard2 } = aboutme;
 
-const About = ({ skills, about }) => {
   return (
-    <S.SectionAbout>
+    <S.SectionAbout id="about">
       <Container>
         <Row>
-          <Col lg={6} md={6}>
+          <Col lg={6} className="about_content mb-5">
             <SectionSubtitle subtitle="Sobre mim" />
             <S.Label>Estou aqui</S.Label>
             <S.Label className="mb-4">
@@ -41,33 +38,28 @@ const About = ({ skills, about }) => {
               <S.PortfolioButton className="primary-btn">
                 <Link href="#portfolio">Meu portifólio</Link>
               </S.PortfolioButton>
-
             </S.Portfolio>
           </Col>
 
-         <Col md={6} lg={6}>
-          <S.AboutImg>
+          <Col md={6} >
+            <S.AboutImg>
               <S.About className="d-flex flex-column mb-3">
-                <S.ContainerImg>
-                  <Image src={img1} alt="about-img" />
-                </S.ContainerImg>
-
-                <S.ContainerImg>
-                  <Image src={img2} alt="about-img" />
-                </S.ContainerImg>
+                {aboutImgCard1.map(({ id, path }) => (
+                  <S.ContainerImg key={id}>
+                    <S.Image src={path} alt="about-img" width={100} height={100} />
+                  </S.ContainerImg>
+                ))}
               </S.About>
 
               <S.About className="d-flex flex-column mb-3">
-                <S.ContainerImg>
-                  <Image src={img3} alt="about-img" />
-                </S.ContainerImg>
-
-                <S.ContainerImg>
-                  <Image src={img4} alt="about-img" />
-                </S.ContainerImg>
+                {aboutImgCard2.map(({ id, path }) => (
+                  <S.ContainerImg key={id}>
+                    <S.Image src={path} alt="about-img" />
+                  </S.ContainerImg>
+                ))}
               </S.About>
-          </S.AboutImg>
-         </Col>
+            </S.AboutImg>
+          </Col>
         </Row>
       </Container>
     </S.SectionAbout>

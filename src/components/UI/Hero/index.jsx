@@ -8,7 +8,7 @@ import SectionSubtitle from "../SectionSubtitle";
 
 const Hero = () => {
   return (
-    <S.ContainerHero>
+    <S.ContainerHero id="home">
       <Container>
         <Row>
           <Col lg={6} md={6}>

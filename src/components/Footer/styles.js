@@ -3,7 +3,13 @@ import styled from "styled-components";
 import { colors, space } from "~/styles";
 
 export default {
-  Footer: styled.footer``,
+  Footer: styled.footer`
+    @media only screen and (max-width: 768px) {
+      .footer_top {
+        display: none;
+      }
+    }
+  `,
   NavMenu: styled.div`
     display: flex;
     align-items: center;

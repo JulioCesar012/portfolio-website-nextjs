@@ -3,10 +3,22 @@ import styled from "styled-components";
 import { colors, space } from "~/styles";
 
 export default {
-  SectionAbout: styled.section``,
+  SectionAbout: styled.section`
+    margin-bottom: ${space[5]}px;
+
+    @media only screen and (max-width: 992px) {
+      .about_content {
+        width: 100% !important;
+      }
+    }
+  `,
   Label: styled.h3`
     margin-top: ${space[1]}px;
     font-weight: 600;
+
+    @media only screen and (max-width: 992px) {
+      font-size: 1.3rem;
+    }
   `,
   DescriptionAboutMe: styled.p`
     margin-bottom: ${space[4]}px;
@@ -52,6 +64,10 @@ export default {
     margin-bottom: ${space[2]}px;
     border-radius: 5px;
 
+    @media only screen and (max-width: 992px) {
+      justify-content: center;
+      margin-top: ${space[6]}px;
+    }
   `,
   About: styled.div`
     display: flex;
@@ -64,11 +80,11 @@ export default {
     margin-bottom: 20px;
     border-radius: 5px;
     margin-right: 15px;
-
-    img {
-        width: 100% !important;
-        max-width: 200px !important;
-        border-radius: 5px;
-      }
+  `,
+  Image: styled.img`
+    width: 100% !important;
+    max-width: 200px !important;
+    height: 100%;
+    border-radius: 5px;
   `,
 };

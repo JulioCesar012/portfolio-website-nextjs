@@ -5,7 +5,7 @@ export default {
     Subtitle: styled.h5`
         color: ${colors['verde-claro']};
         font-weight: 400;
-        margin-left: ${space[5]}px;
+        margin: ${space[1]}px ${space[5]}px;
         position: relative;
 
         &:before {

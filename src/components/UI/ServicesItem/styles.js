@@ -35,6 +35,9 @@ export default {
             border-radius: ${space[1]}px ${space[1]}px 0 ${space[1]}px;
         }
 
+        @media only screen and (max-width: 992px) {
+            padding: ${space[2]}px;
+        }
     `,
     Icon: styled.span`
         background: ${colors['transparent']};
@@ -42,11 +45,22 @@ export default {
             background: ${colors['transparent']};
             color: ${colors['verde-claro']};
             font-size: 3rem;
+
+            @media only screen and (max-width: 992px) {
+            font-size: 2rem;
+        }
+        }
+        @media only screen and (max-width: 992px) {
+            font-size: 2rem;
         }
     `,
     Title: styled.h5`
         background: ${colors['transparent']};
         font-size: 1rem;
+
+        @media only screen and (max-width: 992px) {
+            font-size: 0.9rem;
+        }
     `,
 
 }
