@@ -6,7 +6,7 @@ export default {
     @media only screen and (max-width: 768px) {
       .testimonial_img {
         margin-top: -${space[6]}px;
-        margin-bottom: ${space[2]}px;
+        margin-bottom: ${space[5]}px;
         text-align: center;
 
         img {
@@ -15,11 +15,13 @@ export default {
         }
       }
     }
+
+    @media only screen and (max-width: 576px) {
+      .slick-prev, .slick-next {
+        display: none !important;
+      }
+    }
   `,
-  // TestimonialImage: styled.img`
-  //     width: 400px;
-  //     height: 40px;
-  // `,
   TitleClients: styled.h4`
     margin-top: ${space[1]}px;
     margin-bottom: ${space[5]}px;
