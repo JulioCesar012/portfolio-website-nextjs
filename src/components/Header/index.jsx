@@ -77,8 +77,8 @@ const Header = () => {
             </S.NavMenu>
           </S.Navigation>
 
-          <S.MobileMenu>
-            <i className="ri-menu-line" onClick={toggleMenu}></i>
+          <S.MobileMenu onClick={toggleMenu}>
+            <i className="ri-menu-line"></i>
           </S.MobileMenu>
         </S.Wrapper>
       </Container>
