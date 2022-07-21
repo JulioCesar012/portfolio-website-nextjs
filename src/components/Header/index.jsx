@@ -48,7 +48,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", headerFunc);
   }, []);
 
-  const toggleMenu = () => menuRef.current.classList.toggle("active_menu")
+  const toggleMenu = () => menuRef.current.classList.add("active_menu")
 
   return (
     <S.Header ref={headerRef}>
