@@ -8,6 +8,10 @@ export default {
         @media only screen and (max-width: 768px) {
             padding-bottom: 0;
         }
+
+        @media only screen and (max-width: 576px) {
+            padding-top: ${space[9]}px;
+        }
     `,
     TitleContact: styled.h3`
         margin-top: ${space[1]}px;

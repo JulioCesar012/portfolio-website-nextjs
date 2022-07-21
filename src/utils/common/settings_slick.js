@@ -4,7 +4,7 @@ export const settings = {
     autoplaySpeed: 2000,
     swipeToSlide: true,
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
