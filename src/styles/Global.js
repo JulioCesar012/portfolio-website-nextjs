@@ -95,7 +95,8 @@ footer {
     }
 
 .active_menu {
-    display: block !important;
+	display: block !important;
+	transform: translateX(0);
 }
 
 @media only screen and (max-width: 992px) {

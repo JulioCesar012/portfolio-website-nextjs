@@ -2,7 +2,7 @@ import S from "./styles";
 
 import Link from "next/link";
 import { Container } from "reactstrap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_LINK = [
   {
@@ -48,7 +48,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", headerFunc);
   }, []);
 
-  const toggleMenu = () => menuRef.current.classList.toggle("active_menu")
+  const toggleMenu = () => menuRef.current.classList.toggle("active_menu");
 
   return (
     <S.Header ref={headerRef}>
@@ -60,7 +60,10 @@ const Header = () => {
             </S.Title>
           </S.Logo>
 
-          <S.Navigation ref={menuRef} onClick={toggleMenu}>
+          <S.Navigation ref={menuRef}>
+            <S.CloseButton onClick={toggleMenu}>
+              <i className="ri-close-fill"></i>
+            </S.CloseButton>
             <S.NavMenu>
               {NAV_LINK.map((item, index) => (
                 <Link href={item.path} key={index}>
