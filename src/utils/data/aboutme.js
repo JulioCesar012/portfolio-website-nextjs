@@ -1,5 +1,5 @@
 export const aboutme = {
-        about: "Olá, me chamo Julio. Sou Dev. Frontend/Fullstack. Programo desde os meus 11 anos. Comecei pela curiosidade na área e por que queria fazer uma calculadora em Python. Desde então venho estudando tecnologias modernas e ganhando experiência no mercado de TI. Já tive oportunidade de desenvolver diversos projetos grandes do zero, desde softwares de gestão até marketplace delivery para um grande banco",
+        about: "Algumas das empresas importantes que já tive participação direta ou indiretamente. Sou um dev autodidata, proativo, trabalho com métodologias ágeis como Scrum, Kanban, XP. Possuo tomada de decisão análitica, já trabalhei com padrão Atomic Design e Design System para criação de interfaces. Sigo o desenvolvimento baseado em arquiteturas modernas e patterns recomendados por grandes players do mercado. Dou consultoria de T.I para quem precisar do meu conhecimento.",
         aboutImgCard1: [
             {
                 "id": 1,

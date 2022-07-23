@@ -33,10 +33,8 @@ const Services = () => {
           </S.SkillsAddOn>
 
           <S.MyProfileDescription>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            dolorum magni nam? Reprehenderit consequuntur culpa nostrum delectus
-            earum. Alias deserunt iure aspernatur laboriosam necessitatibus
-            doloribus dolorem commodi, iste quasi repellendus?
+            Meu foco desde 2015 tem sido o React.js (legado/funcional) e mais recente o Next.js, e programo com Javascript a 10 anos. Algumas bibliotecas que usei foram styled-components,
+            material-ui, antdesign, socket.io, sass, plop, parallax, swiper, axios, redux e redux saga, webpack, jest, cocumber, cypress, e diversas outras...
           </S.MyProfileDescription>
         </Col>
       </Row>

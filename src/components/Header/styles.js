@@ -36,10 +36,15 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background: ${colors["azul-escuro/fourth-base"]};
       z-index: 9999;
-      display: none;
+      display: flex;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+    @media only screen and (max-width: 280px) {
+      height: 100%;
     }
   `,
   NavMenu: styled.div`
@@ -54,6 +59,7 @@ export default {
       text-decoration: none;
       transition: 0.3s;
       cursor: pointer;
+      outline: none;
 
       &:hover {
         color: ${colors["verde-claro"]};
@@ -75,6 +81,31 @@ export default {
       justify-content: center;
     }
   `,
+  CloseButton: styled.button`
+    width: max-content;
+    height: max-content;
+    border: none;
+    display: none;
+
+    i {
+      font-size: ${space[4]}px;
+      color: ${colors["white/neutral-0"]};
+    }
+
+    @media only screen and (max-width: 992px) {
+      display: block;
+      position: fixed;
+      right: ${space[3]}px;
+      top: ${space[1]}px;
+      bottom: 0;
+      z-index: 9999;
+
+      &:hover {
+        transition: all ease 0.5s;
+        transform: rotate(40deg) translateY(1px) translateX(0);
+      }
+    }
+  `,
   NavRight: styled.div`
     display: flex;
     align-items: center;
@@ -84,7 +115,10 @@ export default {
       display: none;
     }
   `,
-  Phone: styled.p`
+  Phone: styled.a`
+  padding: 0;
+  border: 0;
+  margin: 0;
     color: ${colors["verde-claro"]};
     position: relative;
     font-weight: 550;
@@ -93,12 +127,15 @@ export default {
     &::before {
       content: "";
       position: absolute;
-      top: 25%;
+      top: 40%;
       left: -20px;
       width: 1px;
       height: 14px;
       background: ${colors["cinza/neutral"]};
       color: ${colors["cinza/neutral"]};
+    }
+    &:hover {
+      opacity: 0.9;
     }
   `,
   IconPhone: styled.i`

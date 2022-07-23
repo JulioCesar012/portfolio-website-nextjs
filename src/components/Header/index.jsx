@@ -2,7 +2,7 @@ import S from "./styles";
 
 import Link from "next/link";
 import { Container } from "reactstrap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_LINK = [
   {
@@ -18,8 +18,8 @@ const NAV_LINK = [
     display: "Portfolio",
   },
   {
-    path: "#feedbacks",
-    display: "Feedbacks",
+    path: "#study",
+    display: "Study",
   },
   {
     path: "#contact",
@@ -48,7 +48,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", headerFunc);
   }, []);
 
-  const toggleMenu = () => menuRef.current.classList.toggle("active_menu")
+  const toggleMenu = () => menuRef.current.classList.toggle("active_menu");
 
   return (
     <S.Header ref={headerRef}>
@@ -60,7 +60,10 @@ const Header = () => {
             </S.Title>
           </S.Logo>
 
-          <S.Navigation ref={menuRef} onClick={toggleMenu}>
+          <S.Navigation ref={menuRef}>
+            <S.CloseButton onClick={toggleMenu}>
+              <i className="ri-close-fill"></i>
+            </S.CloseButton>
             <S.NavMenu>
               {NAV_LINK.map((item, index) => (
                 <Link href={item.path} key={index}>
@@ -69,7 +72,7 @@ const Header = () => {
               ))}
 
               <S.NavRight>
-                <S.Phone className="d-flex align-items-center gap-2 mb-0">
+                <S.Phone className="d-flex align-items-center gap-2 mb-0" href="https://bit.ly/juliofilho" target="_blank">
                   <S.IconPhone className="ri-phone-line"></S.IconPhone>+55
                   (12)99709-5524
                 </S.Phone>

@@ -1,8 +1,8 @@
 import GlobalStyle from "../styles/Global";
-import { Contact, Hero, Portfolio, Services, Testimonial } from "~/components";
+import { Contact, Hero, Portfolio, Services, Study } from "~/components";
 import About from "~/components/UI/About";
 
-import { aboutme, skills, testimonial } from '~/utils';
+import { aboutme, contact, hero, skills, study } from '~/utils';
 
 export default function Home() {
   const aboutProps = {
@@ -13,12 +13,12 @@ export default function Home() {
   return (
     <>
       <GlobalStyle />
-      <Hero />
+      <Hero {...hero} />
       <Services />
       <About {...aboutProps}  />
       <Portfolio />
-      <Testimonial {...testimonial} />
-      <Contact />
+      <Study {...study} />
+      <Contact {...contact}  />
     </>
   );
 }

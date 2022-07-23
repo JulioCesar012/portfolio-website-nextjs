@@ -6,7 +6,7 @@ import HeroImg from "public/images/hero.jpeg";
 import { Col, Container, Row } from "reactstrap";
 import SectionSubtitle from "../SectionSubtitle";
 
-const Hero = () => {
+const Hero = ({ presentation }) => {
   return (
     <S.ContainerHero id="home">
       <Container>
@@ -20,19 +20,16 @@ const Hero = () => {
               <S.Tech className="mb-4">Frontend Engineer</S.Tech>
 
               <S.SummaryText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                quo earum quos recusandae? Molestias deleniti nisi saepe dolore
-                ducimus ipsa unde omnis? Magni iste soluta quis! Perspiciatis
-                temporibus non consequatur?
+                {presentation}
               </S.SummaryText>
 
               <S.ButtonContent className="mt-5">
                 <S.ButtonAboutMe>
-                  <Link href="#">Me contatar</Link>
+                  <Link href="https://bit.ly/juliofilho">Me contatar</Link>
                 </S.ButtonAboutMe>
 
                 <S.ButtonDownloadCV>
-                  <Link href="#">Download CV</Link>
+                  <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171">Download CV</Link>
                 </S.ButtonDownloadCV>
               </S.ButtonContent>
             </S.HeroContent>
@@ -62,7 +59,7 @@ const Hero = () => {
                   <S.LabelYears>+7 anos</S.LabelYears>
                 </S.ContentHeroExperience>
 
-                
+
               </S.HeroExperience>
             </S.HeroImg>
           </Col>
