@@ -59,6 +59,7 @@ export default {
       text-decoration: none;
       transition: 0.3s;
       cursor: pointer;
+      outline: none;
 
       &:hover {
         color: ${colors["verde-claro"]};
@@ -114,7 +115,10 @@ export default {
       display: none;
     }
   `,
-  Phone: styled.p`
+  Phone: styled.a`
+  padding: 0;
+  border: 0;
+  margin: 0;
     color: ${colors["verde-claro"]};
     position: relative;
     font-weight: 550;
@@ -123,12 +127,15 @@ export default {
     &::before {
       content: "";
       position: absolute;
-      top: 25%;
+      top: 40%;
       left: -20px;
       width: 1px;
       height: 14px;
       background: ${colors["cinza/neutral"]};
       color: ${colors["cinza/neutral"]};
+    }
+    &:hover {
+      opacity: 0.9;
     }
   `,
   IconPhone: styled.i`

@@ -4,7 +4,7 @@ import SectionSubtitle from "../SectionSubtitle";
 import Link from "next/link";
 import Form from "../Form";
 
-const Contact = () => {
+const Contact = ({ description_contact }) => {
   return (
     <S.SectionContact>
       <Container>
@@ -13,10 +13,7 @@ const Contact = () => {
             <SectionSubtitle subtitle="Entre em contato" />
             <S.TitleContact>Entre em contato comigo</S.TitleContact>
             <S.DescriptionContact>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil in
-              eum dolores. Non laborum harum fugiat dolor voluptates cum ut
-              eaque dolorum perspiciatis laudantium quod quo nulla nostrum,
-              alias atque.
+              {description_contact}
               </S.DescriptionContact>
               <S.ContactIcons>
                 <S.Icon>
@@ -42,12 +39,11 @@ const Contact = () => {
               </S.ContactIcons>
 
               <S.SocialLinks>
-                <Link
-                 href="#"><i className="ri-youtube-line"></i></Link>
-                <Link href="#"><i className="ri-github-line"></i></Link>
-                <Link href="#"><i className="ri-linkedin-line"></i></Link>
-                <Link href="#"><i className="ri-discord-line"></i></Link>
-                <Link href="#"><i className="ri-medium-line"></i></Link>
+                <Link href="https://www.youtube.com/channel/UCTO59tBT7YNak726ZvwZXew"><i className="ri-youtube-line"></i></Link>
+                <Link href="https://github.com/JulioCesar012"><i className="ri-github-line"></i></Link>
+                <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171"><i className="ri-linkedin-line"></i></Link>
+                <Link href="https://discord.com/users/JulioCesar#9949"><i className="ri-discord-line"></i></Link>
+                <Link href="https://medium.com/@juliofilho12"><i className="ri-medium-line"></i></Link>
               </S.SocialLinks>
           </Col>
 

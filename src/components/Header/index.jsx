@@ -18,8 +18,8 @@ const NAV_LINK = [
     display: "Portfolio",
   },
   {
-    path: "#feedbacks",
-    display: "Feedbacks",
+    path: "#study",
+    display: "Study",
   },
   {
     path: "#contact",
@@ -72,7 +72,7 @@ const Header = () => {
               ))}
 
               <S.NavRight>
-                <S.Phone className="d-flex align-items-center gap-2 mb-0">
+                <S.Phone className="d-flex align-items-center gap-2 mb-0" href="https://bit.ly/juliofilho" target="_blank">
                   <S.IconPhone className="ri-phone-line"></S.IconPhone>+55
                   (12)99709-5524
                 </S.Phone>
