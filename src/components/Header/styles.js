@@ -40,6 +40,7 @@ export default {
       background: ${colors["azul-escuro/fourth-base"]};
       z-index: 9999;
       display: flex;
+      transform: translateY(-100%) !important;
       transition: transform 0.4s ease;
     }
     @media only screen and (max-width: 280px) {
