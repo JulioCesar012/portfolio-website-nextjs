@@ -2,7 +2,7 @@ import S from "./styles";
 import Link from "next/link";
 
 function PortfolioItem({ item }) {
-  const { title, img, liveUrl, keyword } = item;
+  const { title, img, keyword, liveUrl, status, preview } = item;
 
   return (
     <S.ContainerPortfolioItem>
@@ -19,13 +19,23 @@ function PortfolioItem({ item }) {
       </S.PortfolioImg>
 
       <S.PortfolioLive>
-        <S.ButtonLive className="primary-btn">
+        {liveUrl && (
+          <S.ButtonLive className="primary-btn">
             <Link href={liveUrl}>Acessar</Link>
-        </S.ButtonLive>
+          </S.ButtonLive>
+        )}
 
-        <S.ButtonLive className="primary-btn">
+        {preview && (
+          <S.ButtonLive className="primary-btn" preview={preview}>
             <Link href={liveUrl}>ver</Link>
-        </S.ButtonLive>
+          </S.ButtonLive>
+        )}
+
+        {status && (
+          <S.ButtonLive className="primary-btn">
+            <Link href="">{status}</Link>
+          </S.ButtonLive>
+        )}
       </S.PortfolioLive>
     </S.ContainerPortfolioItem>
   );

@@ -64,7 +64,7 @@ const Header = () => {
             <S.CloseButton onClick={toggleMenu}>
               <i className="ri-close-fill"></i>
             </S.CloseButton>
-            <S.NavMenu>
+            <S.NavMenu onClick={toggleMenu}>
               {NAV_LINK.map((item, index) => (
                 <Link href={item.path} key={index}>
                   {item.display}

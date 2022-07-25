@@ -51,7 +51,11 @@ export default {
   `,
   ButtonLive: styled.button`
     &:last-child {
+      ${({ preview }) =>
+        preview &&
+        `
       margin-left: ${space[2]}px;
+      `}
     }
   `,
 };
