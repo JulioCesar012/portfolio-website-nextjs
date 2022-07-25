@@ -5,7 +5,8 @@ const portfolio = [
     img: "/images/portfolio-02.jpg",
     category: "Web App",
     keyword: ["Web", "Software", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://site.autodoc.com.br/conaz",
+    preview: null,
   },
 
   {
@@ -14,7 +15,8 @@ const portfolio = [
     img: "/images/portfolio-04.png",
     category: "Web App",
     keyword: ["Web", "ERP", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://site.autodoc.com.br/eva",
+    preview: null,
   },
 
   {
@@ -23,7 +25,8 @@ const portfolio = [
     img: "/images/portfolio-03.jpg",
     category: "Web App",
     keyword: ["Web", "React", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://clonetwitter21.netlify.app",
+    preview: null,
   },
 
   {
@@ -32,7 +35,8 @@ const portfolio = [
     img: "/images/portfolio-01.jpg",
     category: "Web App",
     keyword: ["Web", "Html", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://gauchoeletrica.com.br",
+    preview: null,
   },
 
   {
@@ -41,7 +45,8 @@ const portfolio = [
     img: "/images/portfolio-05.jpg",
     category: "Web App",
     keyword: ["Web", "React", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://github.com/JulioCesar012/NLW3_Happy",
+    preview: null,
   },
 
   {
@@ -50,7 +55,9 @@ const portfolio = [
     img: "/images/portfolio-06.jpg",
     category: "Mobile App",
     keyword: ["Mobile", "Next.js", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: null,
+    status: "Em desenvolvimento",
+    preview: null,
   },
 
   // {
