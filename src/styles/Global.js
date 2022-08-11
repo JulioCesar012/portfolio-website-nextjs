@@ -99,6 +99,27 @@ footer {
 	transform: translateY(0) !important;
 }
 
+.markdown-blog {
+  width: 100%;
+  iframe {
+        width: 600px;
+        max-width: 600px;
+
+        @media only screen and (max-width: 992px) {
+          width: 100%; 
+        }
+    }
+}
+
+.content-not-found {
+  padding-top: ${space[2]}px;
+  text-align: center;
+}
+
+.button-return-home {
+  background: ${colors["verde-claro"]};
+}
+
 @media only screen and (max-width: 992px) {
   p {
     font-size: .9rem;
@@ -109,7 +130,6 @@ footer {
     font-size: .9rem;
   }
 }
-
 /*
 .primary-btn a {
   text-decoration: none;

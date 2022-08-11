@@ -23,6 +23,7 @@ export const colors = {
   "background/icon": "#01D29338",
   "white/neutral-0": "#FFF",
   "transparent": "transparent",
+  "back-button": "#859EDB"
 };
 
 export const theme = {
