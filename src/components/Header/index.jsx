@@ -22,6 +22,10 @@ const NAV_LINK = [
     display: "Study",
   },
   {
+    path: "/blog",
+    display: "Blog",
+  },
+  {
     path: "#contact",
     display: "Contact",
   },
