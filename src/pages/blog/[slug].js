@@ -1,4 +1,4 @@
-import S from "./styles";
+import S from "../../styles/blog";
 
 import { colors } from "~/styles";
 import { fetchAPI } from "../../../lib/api";
