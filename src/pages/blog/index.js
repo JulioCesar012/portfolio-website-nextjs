@@ -4,7 +4,7 @@ import { Col, Container, Row } from "reactstrap";
 import { CardPosts } from "~/components";
 import SectionSubtitle from "~/components/UI/SectionSubtitle";
 import { fetchAPI } from "../../../lib/api";
-import S from "./styles";
+import S from "~/styles/blog";
 
 const Blog = ({ articles }) => {
   const route = useRouter();
