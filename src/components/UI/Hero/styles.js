@@ -87,6 +87,14 @@ export default {
     background: ${colors["background/cinza"]};
     z-index: 10;
 
+    @media only screen and (max-width: 1400px) {
+      left: 10%;
+    }
+
+    @media only screen and (max-width: 1199px) {
+      left: -6%;
+    }
+
     @media only screen and (max-width: 992px) {
       width: 90px;
       padding: 10px;
