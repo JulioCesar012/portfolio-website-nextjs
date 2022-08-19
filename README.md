@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="WebsitePortifólio" title="#Website Portifólio" src="./public/juliofilho_website.png" width="500px" />
+    <img alt="WebsitePortifólio" title="#Website Portifólio" src="./public/images/juliofilho_website.png" width="500px" />
 </h1>
 
 <h4 align="center"> 
