@@ -7,6 +7,9 @@ export default {
     margin-bottom: ${space[5]}px;
 
     @media only screen and (max-width: 992px) {
+      padding-left: ${space[1]}px;
+      padding-right: ${space[1]}px;
+
       .about_content {
         width: 100% !important;
       }
@@ -58,7 +61,7 @@ export default {
   `,
   AboutImg: styled.div`
     display: flex;
-    gap: 4px;
+    gap: ${space[2]}px;
     justify-content: flex-end;
     padding: ${space[1]}px;
     margin-bottom: ${space[2]}px;
@@ -79,7 +82,6 @@ export default {
     background-color: ${colors["azul-escuro/secondary-base"]};
     margin-bottom: 20px;
     border-radius: 5px;
-    margin-right: 15px;
   `,
   Image: styled.img`
     width: 100% !important;

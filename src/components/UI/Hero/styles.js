@@ -11,6 +11,8 @@ export default {
 
     @media only screen and (max-width: 992px) {
       padding-top: 0;
+      padding-left: ${space[1]}px;
+      padding-right: ${space[1]}px;
     }
   `,
   TitleContent: styled.h2`
@@ -73,7 +75,7 @@ export default {
     @media only screen and (max-width: 768px) {
       text-align: center;
       margin-top: ${space[6]}px;
-}
+    }
   `,
   HeroSkills: styled.div`
     text-align: left;

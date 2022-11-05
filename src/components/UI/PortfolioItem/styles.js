@@ -15,6 +15,13 @@ export default {
     color: ${colors["verde-claro"]};
     margin-bottom: ${space[2]}px;
     background: ${colors["transparent"]};
+
+    @media only screen and (max-width: 992px) {
+      max-width: 20ch;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   `,
   PortfolioImg: styled.div`
     background: ${colors["transparent"]};
@@ -28,12 +35,12 @@ export default {
 
     @media only screen and (max-width: 576px) {
       width: 100%;
-      height: unset;
+      height: unset !important;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       width: 100%;
-      height: unset;
+      height: 120px;
     }
   `,
   PortfolioKeyword: styled.span`

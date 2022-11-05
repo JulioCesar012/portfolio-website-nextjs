@@ -36,6 +36,10 @@ h2 {
 
 section {
   padding-top: 150px;
+
+  @media only screen and (max-width: 992px) {
+    padding-top: 60px;
+  }
 }
 
 footer {

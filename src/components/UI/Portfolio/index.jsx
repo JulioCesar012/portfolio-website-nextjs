@@ -6,20 +6,21 @@ import PortfolioItem from "../PortfolioItem";
 import { useEffect, useState } from "react";
 
 const Portfolio = () => {
-
-  const [filter, setFilter] = useState('Web App');
+  const [filter, setFilter] = useState("Web App");
   const [data, setData] = useState([]);
 
-  const active = 'button-mobile-app';
+  const active = "button-mobile-app";
 
   useEffect(() => {
-    if(filter === 'Web App' || filter === 'Mobile App') {
-      const filteredData = portfolio.filter(({ category }) => category === filter)
+    if (filter === "Web App" || filter === "Mobile App") {
+      const filteredData = portfolio.filter(
+        ({ category }) => category === filter
+      );
 
-      setData(filteredData)
+      setData(filteredData);
       return;
     }
-    return setData(portfolio)
+    return setData(portfolio);
   }, [filter]);
 
   return (
@@ -33,13 +34,15 @@ const Portfolio = () => {
 
           <Col lg={6} md={6}>
             <S.ContainerButton>
-              <S.ButtonMobileApp className={`${filter === 'Web App' && active} secondary-btn`}
-              onClick={() => setFilter('Web App')}
+              <S.ButtonMobileApp
+                className={`${filter === "Web App" && active} secondary-btn`}
+                onClick={() => setFilter("Web App")}
               >
                 Web App
               </S.ButtonMobileApp>
-              <S.ButtonMobileApp className={`${filter === 'Mobile App' && active} secondary-btn`}
-              onClick={() => setFilter('Mobile App')}
+              <S.ButtonMobileApp
+                className={`${filter === "Mobile App" && active} secondary-btn`}
+                onClick={() => setFilter("Mobile App")}
               >
                 Mobile App
               </S.ButtonMobileApp>

@@ -41,12 +41,17 @@ const About = (aboutProps) => {
             </S.Portfolio>
           </Col>
 
-          <Col md={6} >
+          <Col md={6}>
             <S.AboutImg>
               <S.About className="d-flex flex-column mb-3">
                 {aboutImgCard1.map(({ id, path }) => (
                   <S.ContainerImg key={id}>
-                    <S.Image src={path} alt="about-img" width={100} height={100} />
+                    <S.Image
+                      src={path}
+                      alt="about-img"
+                      width={100}
+                      height={100}
+                    />
                   </S.ContainerImg>
                 ))}
               </S.About>

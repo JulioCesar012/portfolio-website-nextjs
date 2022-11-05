@@ -17,7 +17,8 @@ export default {
     }
 
     @media only screen and (max-width: 576px) {
-      .slick-prev, .slick-next {
+      .slick-prev,
+      .slick-next {
         display: none !important;
       }
     }
@@ -25,6 +26,9 @@ export default {
   TitleClients: styled.h4`
     margin-top: ${space[1]}px;
     margin-bottom: ${space[5]}px;
+  `,
+  TopContent: styled.div`
+    padding: ${space[1]}px;
   `,
   StudyItem: styled.div`
     padding: 0 ${space[2]}px;

@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { colors, space } from "~/styles";
 
 export default {
-  ContainerPortfolio: styled.div``,
+  ContainerPortfolio: styled.div`
+    @media only screen and (max-width: 992px) {
+      padding: ${space[1]}px;
+    }
+  `,
   Works: styled.h4`
     margin-bottom: ${space[4]}px;
   `,
@@ -10,7 +14,7 @@ export default {
     text-align: end;
 
     .button-mobile-app {
-        color: ${colors["verde-claro"]};
+      color: ${colors["verde-claro"]};
     }
 
     @media only screen and (max-width: 768px) {

@@ -16,8 +16,10 @@ const Study = ({ studies }) => {
           </Col>
 
           <Col lg={6} md={6}>
-            <SectionSubtitle subtitle="Estudos" />
-            <S.TitleClients>Alguns dos Cursos que eu fiz</S.TitleClients>
+            <S.TopContent>
+              <SectionSubtitle subtitle="Estudos" />
+              <S.TitleClients>Alguns dos Cursos que eu fiz</S.TitleClients>
+            </S.TopContent>
 
             <Slider {...settings}>
               {studies.map(
@@ -30,12 +32,7 @@ const Study = ({ studies }) => {
                 }) => (
                   <S.StudyItem key={id}>
                     <S.StudyClient>
-                      <Image
-                        alt="cursos"
-                        src={img}
-                        width={50}
-                        height={50}
-                      />
+                      <Image alt="cursos" src={img} width={50} height={50} />
 
                       <S.ContainerLabels>
                         <S.ClientName>{school_name}</S.ClientName>

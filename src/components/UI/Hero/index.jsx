@@ -19,9 +19,7 @@ const Hero = ({ presentation }) => {
               </S.TitleContent>
               <S.Tech className="mb-4">Frontend Engineer</S.Tech>
 
-              <S.SummaryText>
-                {presentation}
-              </S.SummaryText>
+              <S.SummaryText>{presentation}</S.SummaryText>
 
               <S.ButtonContent className="mt-5">
                 <S.ButtonAboutMe>
@@ -29,7 +27,9 @@ const Hero = ({ presentation }) => {
                 </S.ButtonAboutMe>
 
                 <S.ButtonDownloadCV>
-                  <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171">Download CV</Link>
+                  <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171">
+                    Download CV
+                  </Link>
                 </S.ButtonDownloadCV>
               </S.ButtonContent>
             </S.HeroContent>
@@ -58,8 +58,6 @@ const Hero = ({ presentation }) => {
                   <S.LabelExperience>Experiência</S.LabelExperience>
                   <S.LabelYears>+7 anos</S.LabelYears>
                 </S.ContentHeroExperience>
-
-
               </S.HeroExperience>
             </S.HeroImg>
           </Col>
