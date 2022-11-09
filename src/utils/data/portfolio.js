@@ -51,41 +51,43 @@ const portfolio = [
 
   {
     id: "06",
-    title: "Marketplace Delivery Itaú",
+    title: "App Delivery Itaú (Marketplace)",
     img: "/images/portfolio-06.jpg",
     category: "Mobile App",
-    keyword: ["Mobile", "Next.js", "UI-UX"],
+    keyword: ["PWA", "Next.js", "Sockets"],
     liveUrl: null,
     status: "Em desenvolvimento",
     preview: null,
   },
 
-  // {
-  //   id: "07",
-  //   title: "Portfolio Website",
-  //   img: "/images/portfolio-07.png",
-  //   category: "Web Design",
-  //   keyword: ["Web", "Web design", "UI-UX"],
-  //   liveUrl: "#",
-  // },
+  {
+    id: "07",
+    title: "App Sinaf Seguros",
+    img: "/images/sinaf.png",
+    category: "Mobile App",
+    keyword: ["PWA", "Next.js", "MobileFirst"],
+    liveUrl: null,
+    status: "Em desenvolvimento",
+    preview: null,
+  },
 
-  // {
-  //   id: "08",
-  //   title: "Restaurant Website",
-  //   img: "/images/portfolio-08.png",
-  //   category: "Web Design",
-  //   keyword: ["Web", "Web design", "UI-UX"],
-  //   liveUrl: "#",
-  // },
+  {
+    id: "08",
+    title: "BHP Pinhão Advogados",
+    img: "/images/bhp_pinhao_adv.png",
+    category: "Web App",
+    keyword: ["Web Design", "HTML", "CSS"],
+    liveUrl: "http://pinhao.adv.br",
+  },
 
-  // {
-  //   id: "09",
-  //   title: "Agency Website",
-  //   img: "/images/portfolio-09.png",
-  //   category: "Web Design",
-  //   keyword: ["Web", "Web design", "UI-UX"],
-  //   liveUrl: "#",
-  // },
+  {
+    id: "09",
+    title: "Clone Pinterest",
+    img: "/images/clone_pinterest.gif",
+    category: "Web App",
+    keyword: ["HTML", "CSS", "Javascript"],
+    liveUrl: "https://github.com/JulioCesar012/Clone_Ui_Pinterest",
+  },
 ];
 
 export default portfolio;

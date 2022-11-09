@@ -56,7 +56,7 @@ const Hero = ({ presentation }) => {
 
                 <S.ContentHeroExperience>
                   <S.LabelExperience>Experiência</S.LabelExperience>
-                  <S.LabelYears>+7 anos</S.LabelYears>
+                  <S.LabelYears>+8 anos</S.LabelYears>
                 </S.ContentHeroExperience>
               </S.HeroExperience>
             </S.HeroImg>

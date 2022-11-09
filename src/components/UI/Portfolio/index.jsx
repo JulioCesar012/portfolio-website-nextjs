@@ -12,7 +12,7 @@ const Portfolio = () => {
   const active = "button-mobile-app";
 
   useEffect(() => {
-    if (filter === "Web App" || filter === "Mobile App") {
+    if (filter) {
       const filteredData = portfolio.filter(
         ({ category }) => category === filter
       );
@@ -20,7 +20,6 @@ const Portfolio = () => {
       setData(filteredData);
       return;
     }
-    return setData(portfolio);
   }, [filter]);
 
   return (
@@ -51,7 +50,7 @@ const Portfolio = () => {
 
           {data?.map((item) => (
             <Col lg={4} sm="6" md={4} key={item.id}>
-              <PortfolioItem item={item} />
+              <PortfolioItem {...{ item }} />
             </Col>
           ))}
         </Row>
