@@ -23,7 +23,7 @@ const Hero = ({ presentation }) => {
 
               <S.ButtonContent className="mt-5">
                 <S.ButtonAboutMe>
-                  <Link href="https://bit.ly/juliofilho">Me contatar</Link>
+                  <Link href="https://bit.ly/ContatoJulioFilho">Me contatar</Link>
                 </S.ButtonAboutMe>
 
                 <S.ButtonDownloadCV>

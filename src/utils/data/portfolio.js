@@ -1,6 +1,6 @@
 const portfolio = [
   {
-    id: "01",
+    id: 1,
     title: "Marketplace CONAZ",
     img: "/images/portfolio-02.jpg",
     category: "Web App",
@@ -10,7 +10,7 @@ const portfolio = [
   },
 
   {
-    id: "02",
+    id: 2,
     title: "ERP EVA",
     img: "/images/portfolio-04.png",
     category: "Web App",
@@ -20,7 +20,7 @@ const portfolio = [
   },
 
   {
-    id: "03",
+    id: 3,
     title: "Clone Twitter",
     img: "/images/portfolio-03.jpg",
     category: "Web App",
@@ -30,7 +30,7 @@ const portfolio = [
   },
 
   {
-    id: "04",
+    id: 4,
     title: "Gaúcho Elétrica Ubatuba",
     img: "/images/portfolio-01.jpg",
     category: "Web App",
@@ -40,7 +40,7 @@ const portfolio = [
   },
 
   {
-    id: "05",
+    id: 5,
     title: "Happy NLW",
     img: "/images/portfolio-05.jpg",
     category: "Web App",
@@ -50,7 +50,7 @@ const portfolio = [
   },
 
   {
-    id: "06",
+    id: 6,
     title: "App Delivery Itaú (Marketplace)",
     img: "/images/portfolio-06.jpg",
     category: "Mobile App",
@@ -61,7 +61,7 @@ const portfolio = [
   },
 
   {
-    id: "07",
+    id: 7,
     title: "App Sinaf Seguros",
     img: "/images/sinaf.png",
     category: "Mobile App",
@@ -72,7 +72,7 @@ const portfolio = [
   },
 
   {
-    id: "08",
+    id: 8,
     title: "BHP Pinhão Advogados",
     img: "/images/bhp_pinhao_adv.png",
     category: "Web App",
@@ -81,12 +81,20 @@ const portfolio = [
   },
 
   {
-    id: "09",
+    id: 9,
     title: "Clone Pinterest",
     img: "/images/clone_pinterest.gif",
     category: "Web App",
     keyword: ["HTML", "CSS", "Javascript"],
     liveUrl: "https://github.com/JulioCesar012/Clone_Ui_Pinterest",
+  },
+  {
+    id: 10,
+    title: "Dictionary Web",
+    img: "/images/dictionary_web.png",
+    category: "Web App",
+    keyword: ["Next.js", "Typescript", "Styled Components"],
+    liveUrl: "https://github.com/JulioCesar012/dictionary_web",
   },
 ];
 
