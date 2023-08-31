@@ -27,7 +27,7 @@ export default {
     padding-left: 0;
     margin-top: ${space[5]}px;
   `,
-  Icon: styled.li`
+  Icon: styled.a`
     display: flex;
     align-items: center;
     margin-bottom: ${space[2]}px;
