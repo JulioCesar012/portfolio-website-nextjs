@@ -23,18 +23,18 @@ const Contact = ({ description_contact }) => {
                   <S.InfoContact>Ubatuba - SP, Brasil</S.InfoContact>
                 </S.Icon>
 
-                <S.Icon>
+                <S.Icon href="mailto:devjuliofilho@gmail.com">
                   <S.ContentIcons>
                     <i className="ri-mail-line"></i>
                   </S.ContentIcons>
-                  <S.InfoContact>rodriguesjuliocesar145@gmail.com</S.InfoContact>
+                  <S.InfoContact>devjuliofilho@gmail.com</S.InfoContact>
                 </S.Icon>
 
-                <S.Icon>
+                <S.Icon href="https://wa.me/5512997454645" target="__blank">
                   <S.ContentIcons>
                     <i className="ri-phone-line"></i>
                   </S.ContentIcons>
-                  <S.InfoContact>+55 (12)99709-5524</S.InfoContact>
+                  <S.InfoContact>+55 (12)99745-4645</S.InfoContact>
                 </S.Icon>
               </S.ContactIcons>
 
