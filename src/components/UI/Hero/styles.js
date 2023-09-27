@@ -65,6 +65,7 @@ export default {
 
     img {
       border-radius: ${space[4]}px ${space[1]}px ${space[4]}px ${space[1]}px;
+      object-fit: cover;
 
       @media only screen and (max-width: 992px) {
         width: 250px !important;
