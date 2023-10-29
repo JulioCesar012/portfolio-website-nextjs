@@ -2,7 +2,7 @@ import S from "./styles";
 
 import Image from "next/image";
 import Link from "next/link";
-import HeroImg from "public/images/profile.png";
+import HeroImg from "../../../utils/assets/profile.png";
 import { Col, Container, Row } from "reactstrap";
 import SectionSubtitle from "../SectionSubtitle";
 

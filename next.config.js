@@ -17,6 +17,7 @@ module.exports = withPWA({
   },
   images: {
     loader: "default",
-    domains: ["localhost"],
+    domains: ["localhost", "avatars.githubusercontent.com"],
+    formats: ["png", "jpg", "image/webp"]
   },
 });
