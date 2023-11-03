@@ -7,6 +7,26 @@ import { Col, Container, Row } from "reactstrap";
 import SectionSubtitle from "../SectionSubtitle";
 
 const Hero = ({ presentation }) => {
+  function calculateYears(year_start, month_start, day_start) {
+    var d = new Date(),
+      current_year = d.getFullYear(),
+      current_month = d.getMonth() + 1,
+      current_day = d.getDate(),
+      year_start = +year_start,
+      month_start = +month_start,
+      day_start = +day_start,
+      totalYears = current_year - year_start;
+
+    if (
+      current_month < month_start ||
+      (current_month == month_start && current_day < day_start)
+    ) {
+      totalYears--;
+    }
+
+    return totalYears < 0 ? 0 : totalYears;
+  }
+
   return (
     <S.ContainerHero id="home">
       <Container>
@@ -56,7 +76,9 @@ const Hero = ({ presentation }) => {
 
                 <S.ContentHeroExperience>
                   <S.LabelExperience>Experiência</S.LabelExperience>
-                  <S.LabelYears>+8 anos</S.LabelYears>
+                  <S.LabelYears>
+                    +{calculateYears(2015, 2, 6) || 8} anos
+                  </S.LabelYears>
                 </S.ContentHeroExperience>
               </S.HeroExperience>
             </S.HeroImg>
