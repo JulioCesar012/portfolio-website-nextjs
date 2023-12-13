@@ -27,7 +27,7 @@ O projeto foi desenvolvido utilizando as tecnologias abaixo:
 - [Styled Components][styled-components]
 - [Bootstrap][bootstrap]
 
-:globe_with_meridians: Acesso o projeto clicando [aqui](https://juliofilho.tk).
+:globe_with_meridians: Acesso o projeto clicando [aqui](https://devjulio.com.br).
 
 
 :construction: Como testar:
