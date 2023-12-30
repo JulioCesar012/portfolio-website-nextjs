@@ -60,11 +60,10 @@ export default {
     margin-bottom: 3px;
   `,
   AboutImg: styled.div`
-    display: flex;
     gap: ${space[2]}px;
     justify-content: flex-end;
     padding: ${space[1]}px;
-    margin-bottom: ${space[2]}px;
+    margin-top: ${space[2]}px;
     border-radius: 5px;
 
     @media only screen and (max-width: 992px) {
@@ -73,19 +72,18 @@ export default {
     }
   `,
   About: styled.div`
-    display: flex;
-    flex-direction: column;
     margin-bottom: 3px;
   `,
   ContainerImg: styled.div`
-    padding: 10px;
-    background-color: ${colors["azul-escuro/secondary-base"]};
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
     border-radius: 5px;
   `,
   Image: styled.img`
-    width: 100% !important;
-    max-width: 200px !important;
+    background-color: ${colors["azul-escuro/secondary-base"]};
+    width: 100%;
+    max-width: 100%;
     height: 100%;
     border-radius: 5px;
   `,

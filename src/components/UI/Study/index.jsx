@@ -4,7 +4,7 @@ import network from "public/images/Connectedworld.png";
 import Image from "next/image";
 import SectionSubtitle from "../SectionSubtitle";
 import Slider from "react-slick";
-import { settings } from "~/utils";
+import { slide } from "~/utils";
 
 const Study = ({ studies }) => {
   return (
@@ -21,7 +21,7 @@ const Study = ({ studies }) => {
               <S.TitleClients>Alguns dos Cursos que eu fiz</S.TitleClients>
             </S.TopContent>
 
-            <Slider {...settings}>
+            <Slider {...slide}>
               {studies.map(
                 ({
                   id,

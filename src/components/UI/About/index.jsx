@@ -2,10 +2,22 @@ import S from "./styles";
 import { Col, Container, Row } from "reactstrap";
 import SectionSubtitle from "../SectionSubtitle";
 import Link from "next/link";
+import { slide_portifolio } from "~/utils/common";
+import Slider from "react-slick";
+import { useEffect, useState } from "react";
 
 const About = (aboutProps) => {
   const { skills, aboutme } = aboutProps;
-  const { about, aboutImgCard1, aboutImgCard2 } = aboutme;
+  const { about, aboutImgCard } = aboutme;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      window.addEventListener("resize", setIsMobile(true));
+      return;
+    }
+    return setIsMobile(false);
+  }, [window]);
 
   return (
     <S.SectionAbout id="about">
@@ -41,28 +53,22 @@ const About = (aboutProps) => {
             </S.Portfolio>
           </Col>
 
-          <Col md={6}>
+          <Col lg={6}>
             <S.AboutImg>
-              <S.About className="d-flex flex-column mb-3">
-                {aboutImgCard1.map(({ id, path }) => (
+              <Slider
+                slidesToShow={isMobile ? 2 : 3}
+                slidesToScroll={isMobile ? 2 : 3}
+                {...slide_portifolio}
+              >
+                {aboutImgCard.map(({ id, path }) => (
                   <S.ContainerImg key={id}>
                     <S.Image
                       src={path}
                       alt="about-img"
-                      width={100}
-                      height={100}
                     />
                   </S.ContainerImg>
                 ))}
-              </S.About>
-
-              <S.About className="d-flex flex-column mb-3">
-                {aboutImgCard2.map(({ id, path }) => (
-                  <S.ContainerImg key={id}>
-                    <S.Image src={path} alt="about-img" />
-                  </S.ContainerImg>
-                ))}
-              </S.About>
+              </Slider>
             </S.AboutImg>
           </Col>
         </Row>

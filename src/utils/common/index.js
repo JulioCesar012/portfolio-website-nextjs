@@ -1,1 +1,1 @@
-export { settings } from './settings_slick';
+export { slide, slide_portifolio } from './settings_slick';
