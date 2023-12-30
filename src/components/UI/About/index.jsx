@@ -12,12 +12,12 @@ const About = (aboutProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
-      window.addEventListener("resize", setIsMobile(true));
+    if (typeof window?.innerWidth <= 768) {
+      window?.addEventListener("resize", setIsMobile(true));
       return;
     }
     return setIsMobile(false);
-  }, [window]);
+  }, []);
 
   return (
     <S.SectionAbout id="about">
