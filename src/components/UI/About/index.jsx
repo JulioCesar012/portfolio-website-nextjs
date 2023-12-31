@@ -12,9 +12,8 @@ const About = (aboutProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (typeof window?.innerWidth <= 768) {
-      window?.addEventListener("resize", setIsMobile(true));
-      return;
+    if (global.window.innerWidth <= 768) {
+      return setIsMobile(true);
     }
     return setIsMobile(false);
   }, []);
@@ -62,10 +61,7 @@ const About = (aboutProps) => {
               >
                 {aboutImgCard.map(({ id, path }) => (
                   <S.ContainerImg key={id}>
-                    <S.Image
-                      src={path}
-                      alt="about-img"
-                    />
+                    <S.Image src={path} alt="about-img" />
                   </S.ContainerImg>
                 ))}
               </Slider>
