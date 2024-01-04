@@ -14,6 +14,7 @@ module.exports = withPWA({
     TEMPLATE_ID: process.env.NEXT_PUBLIC_TEMPLATE_ID,
     PUBLIC_KEY: process.env.NEXT_PUBLIC_KEY,
     NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
+    url_cv: process.env.NEXT_PUBLIC_URL_CV
   },
   images: {
     loader: "default",

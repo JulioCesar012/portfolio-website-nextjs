@@ -47,7 +47,7 @@ const Hero = ({ presentation }) => {
                 </S.ButtonAboutMe>
 
                 <S.ButtonDownloadCV>
-                  <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171">
+                  <Link href={process.env.url_cv && `${process.env.url_cv}`}>
                     Download CV
                   </Link>
                 </S.ButtonDownloadCV>

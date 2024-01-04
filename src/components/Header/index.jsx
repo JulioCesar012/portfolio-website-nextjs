@@ -22,7 +22,7 @@ const NAV_LINK = [
     display: "Study",
   },
   {
-    path: "/blog",
+    path: "https://medium.com/@juliofilho12",
     display: "Blog",
   },
   {
