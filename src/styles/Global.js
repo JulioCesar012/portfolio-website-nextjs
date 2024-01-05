@@ -134,22 +134,17 @@ footer {
     font-size: .9rem;
   }
 }
-/*
-.primary-btn a {
-  text-decoration: none;
-  color: ${colors["verde-claro"]};
-  background: ${colors["transparent"]};
-}
 
-.secondary_btn a {
-  color: ${colors["verde-claro"]};
-}
-
-.primary_btn a:hover, .secondary_btn a:hover {
-  color: unset;
-}
-
-  */
+.slick-dots {
+    li.slick-active {
+      button:before {
+      color: ${colors["verde-claro"]}
+    }
+  }
+    li button:before {
+      color: ${colors["white/neutral-0"]};
+    }
+  }
 
 `;
 

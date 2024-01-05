@@ -37,11 +37,6 @@ export default {
       width: 100%;
       height: unset !important;
     }
-
-    @media only screen and (max-width: 992px) {
-      width: 100%;
-      height: 120px;
-    }
   `,
   PortfolioKeyword: styled.span`
     padding: ${space[1]}px ${space[1]}px;

@@ -20,10 +20,18 @@ export const aboutme = {
     },
     {
       id: 5,
-      path: "/images/mazzatech.jpeg",
+      path: "/images/itau.png",
     },
     {
       id: 6,
+      path: "/images/inovaAr.png",
+    },
+    {
+      id: 7,
+      path: "/images/mazzatech.jpeg",
+    },
+    {
+      id: 8,
       path: "/images/amcom.jpeg",
     },
   ],

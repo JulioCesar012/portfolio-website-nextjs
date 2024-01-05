@@ -17,4 +17,5 @@ export const slide_portifolio = {
   infinite: true,
   speed: 2700,
   rows: 2,
+  dotClass: 'slick-dots'
 };

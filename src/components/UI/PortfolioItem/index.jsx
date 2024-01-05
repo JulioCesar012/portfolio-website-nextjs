@@ -21,13 +21,13 @@ function PortfolioItem({ item }) {
       <S.PortfolioLive>
         {liveUrl && (
           <S.ButtonLive className="primary-btn">
-            <Link href={liveUrl}>Acessar</Link>
+            <Link href={`${liveUrl}`}>Acessar</Link>
           </S.ButtonLive>
         )}
 
         {preview && (
           <S.ButtonLive className="primary-btn" preview={preview}>
-            <Link href={liveUrl}>ver</Link>
+            <Link href={`${liveUrl}`}>ver</Link>
           </S.ButtonLive>
         )}
 

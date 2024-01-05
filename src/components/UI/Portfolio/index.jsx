@@ -1,13 +1,22 @@
-import S from "./styles";
-import { Col, Container, Row } from "reactstrap";
-import SectionSubtitle from "../SectionSubtitle";
-import portfolio from "~/utils/data/portfolio";
-import PortfolioItem from "../PortfolioItem";
 import { useEffect, useState } from "react";
+import { Col, Container, Row } from "reactstrap";
+
+import SectionSubtitle from "../SectionSubtitle";
+import PortfolioItem from "../PortfolioItem";
+
+import portfolio from "~/utils/data/portfolio";
+import { useWindowDimensions } from "~/hooks/useWindowDimension";
+
+import S from "./styles";
+import { _resizeColumn } from "~/hooks/_resizeColumn";
 
 const Portfolio = () => {
+  const { width } = useWindowDimensions();
+
   const [filter, setFilter] = useState("Web App");
   const [data, setData] = useState([]);
+  const [columnWidth, setColumnWidth] = useState(4);
+  const [columnSM, setColumnSM] = useState(6);
 
   const active = "button-mobile-app";
 
@@ -21,6 +30,10 @@ const Portfolio = () => {
       return;
     }
   }, [filter]);
+
+  useEffect(() => {
+    _resizeColumn(width, setColumnWidth, setColumnSM);
+  }, [width, columnWidth, columnSM]);
 
   return (
     <S.ContainerPortfolio id="portfolio">
@@ -49,7 +62,7 @@ const Portfolio = () => {
           </Col>
 
           {data?.map((item) => (
-            <Col lg={4} sm="6" md={4} key={item.id}>
+            <Col lg={columnWidth} sm={columnSM} md={columnWidth} key={item.id}>
               <PortfolioItem {...{ item }} />
             </Col>
           ))}

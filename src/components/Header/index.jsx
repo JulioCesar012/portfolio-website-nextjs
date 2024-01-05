@@ -70,7 +70,7 @@ const Header = () => {
             </S.CloseButton>
             <S.NavMenu onClick={toggleMenu}>
               {NAV_LINK.map((item, index) => (
-                <Link href={item.path} key={index}>
+                <Link href={`${item.path}`} key={index}>
                   {item.display}
                 </Link>
               ))}

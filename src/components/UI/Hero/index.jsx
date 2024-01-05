@@ -47,7 +47,7 @@ const Hero = ({ presentation }) => {
                 </S.ButtonAboutMe>
 
                 <S.ButtonDownloadCV>
-                  <Link href={process.env.url_cv && `${process.env.url_cv}`}>
+                  <Link href={`${process.env.url_cv}`}>
                     Download CV
                   </Link>
                 </S.ButtonDownloadCV>

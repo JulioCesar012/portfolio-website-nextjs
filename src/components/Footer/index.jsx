@@ -16,7 +16,7 @@ const Footer = () => {
         <Col lg={6} className="footer_top">
           <S.NavMenu>
             {NAV_LINK.map((item, index) => (
-              <Link href={item.path} key={index}>
+              <Link href={`${item.path}`} key={index}>
                 {item.display}
               </Link>
             ))}
