@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Header } from "~/components";
+import { Footer, Header } from "~/components";
 import S from "./styles";
 
 const Layout = (props) => {
@@ -7,6 +7,7 @@ const Layout = (props) => {
     <Fragment>
       <Header />
       <S.Container>{props.children}</S.Container>
+      <Footer />
     </Fragment>
   );
 };

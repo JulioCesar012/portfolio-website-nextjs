@@ -1,5 +1,4 @@
 import {
-  Footer,
   Contact,
   Hero,
   Portfolio,
@@ -24,7 +23,6 @@ const Home = () => {
       <Portfolio />
       <Study {...study} />
       <Contact {...contact} />
-      <Footer />
     </>
   );
 };

@@ -22,7 +22,8 @@ const NAV_LINK = [
     display: "Study",
   },
   {
-    path: "https://medium.com/@juliofilho12",
+    path: '/blog',
+    // path: "https://medium.com/@juliofilho12",
     display: "Blog",
   },
   {
@@ -56,7 +57,7 @@ const Header = () => {
 
   return (
     <S.Header ref={headerRef}>
-      <Container>
+      <Container style={{ zIndex: 10 }}>
         <S.Wrapper>
           <S.Logo>
             <S.Title>

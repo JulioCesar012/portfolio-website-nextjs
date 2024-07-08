@@ -95,7 +95,7 @@ footer {
       height: 80px;
       line-height: 80px;
       box-shadow: ${space[1]}px ${space[1]}px 15px -${space[1]}px ${colors["verde-escuro"]} !important;
-      z-index: 9999;
+      z-index: 10;
     }
 
 .active_menu {
