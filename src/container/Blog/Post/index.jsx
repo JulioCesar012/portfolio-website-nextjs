@@ -61,7 +61,7 @@ const Post = () => {
 
   useEffect(() => {
     if (postData) {
-      document.title = postData.title;
+      document.title = `Blog - ${postData?.title}`;
     }
   }, [postData]);
 
@@ -175,6 +175,10 @@ const Post = () => {
       ) : (
         <>
           <S.Header>
+            <S.BackButton onClick={() => router.push('/blog')}>
+              <i class="ri-arrow-left-s-line"></i> Voltar
+            </S.BackButton>
+
             <S.Title title={postData?.title}>{trimmedTitle}</S.Title>
 
             <S.ContentAuthor>

@@ -1,38 +1,40 @@
-import S from "./styles";
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { Container } from 'reactstrap';
 
-import Link from "next/link";
-import { Container } from "reactstrap";
-import { useEffect, useRef, useState } from "react";
+import S from './styles';
 
 const NAV_LINK = [
   {
-    path: "/",
-    display: "Home",
+    path: '/',
+    display: 'Home',
   },
   {
-    path: "#about",
-    display: "About",
+    path: '/#about',
+    display: 'About',
   },
   {
-    path: "#portfolio",
-    display: "Portfolio",
+    path: '/#portfolio',
+    display: 'Portfolio',
   },
   {
-    path: "#study",
-    display: "Study",
+    path: '/#study',
+    display: 'Study',
   },
   {
     path: '/blog',
     // path: "https://medium.com/@juliofilho12",
-    display: "Blog",
+    display: 'Blog',
   },
   {
-    path: "#contact",
-    display: "Contact",
+    path: '/#contact',
+    display: 'Contact',
   },
 ];
 
 const Header = () => {
+  const router = useRouter(); // Obtém o objeto router do Next.js
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -41,19 +43,19 @@ const Header = () => {
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      headerRef.current.classList.add("header_shrink");
+      headerRef.current.classList.add('header_shrink');
       return;
     }
-    return headerRef.current.classList.remove("header_shrink");
+    return headerRef.current.classList.remove('header_shrink');
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", headerFunc);
+    window.addEventListener('scroll', headerFunc);
 
-    return () => window.removeEventListener("scroll", headerFunc);
+    return () => window.removeEventListener('scroll', headerFunc);
   }, []);
 
-  const toggleMenu = () => menuRef.current.classList.toggle("active_menu");
+  const toggleMenu = () => menuRef.current.classList.toggle('active_menu');
 
   return (
     <S.Header ref={headerRef}>
@@ -70,14 +72,22 @@ const Header = () => {
               <i className="ri-close-fill"></i>
             </S.CloseButton>
             <S.NavMenu onClick={toggleMenu}>
-              {NAV_LINK.map((item, index) => (
-                <Link href={`${item.path}`} key={index}>
-                  {item.display}
-                </Link>
-              ))}
+              {NAV_LINK.map((item, index) => {
+                const isActive = router.asPath === item.path;
+
+                return (
+                  <Link href={`${item.path}`} key={index}>
+                    <S.NavItem active={isActive}>{item.display}</S.NavItem>
+                  </Link>
+                );
+              })}
 
               <S.NavRight>
-                <S.Phone className="d-flex align-items-center gap-2 mb-0" href="https://bit.ly/ContatoJulioFilho" target="_blank">
+                <S.Phone
+                  className="d-flex align-items-center gap-2 mb-0"
+                  href="https://bit.ly/ContatoJulioFilho"
+                  target="_blank"
+                >
                   <S.IconPhone className="ri-phone-line"></S.IconPhone>+55
                   (12)99745-4645
                 </S.Phone>

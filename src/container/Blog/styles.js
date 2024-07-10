@@ -34,7 +34,7 @@ export default {
       background-color: #ccc;
       border-radius: 2px;
     } */
-    
+
     @media (max-width: 768px) {
       gap: ${space[2]}px; /* Reduz o espaçamento entre itens em dispositivos menores */
       padding: ${space[4]}px 0 ${space[2]}px; /* Ajusta o padding para dispositivos menores */
@@ -80,7 +80,7 @@ export default {
     }
   `,
   PostCard: styled.div`
-        width: calc(33.33% - 1rem); /* 3 colunas */
+    width: calc(33.33% - 1rem); /* 3 colunas */
     display: block;
     cursor: pointer;
     max-width: 100%;
@@ -116,6 +116,10 @@ export default {
     max-width: 100%;
     height: auto;
     max-height: 224px;
+
+    &:hover {
+      border: 4px solid ${colors['verde-claro']}
+    }
   `,
   PreviewContent: styled.div``,
   Author: styled.div``,

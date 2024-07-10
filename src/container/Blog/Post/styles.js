@@ -6,6 +6,24 @@ export default {
     border-bottom: 1.5px solid #808dad;
     padding-bottom: 2.5rem;
   `,
+  BackButton: styled.button`
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 6px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    
+    i {
+      font-size: 25px;
+    }
+
+    &:active {
+      color: ${colors['verde-claro']};
+    }
+  `,
   Title: styled.h1`
     font-size: 3rem;
     line-height: 1;

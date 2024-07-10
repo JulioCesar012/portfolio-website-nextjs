@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import styled from "styled-components";
-import { colors, space } from "~/styles";
+import styled from 'styled-components';
+import { colors, space } from '~/styles';
 
 export default {
   Header: styled.header`
@@ -25,7 +25,7 @@ export default {
     }
   `,
   SlugTitle: styled.span`
-    color: ${colors["verde-claro"]};
+    color: ${colors['verde-claro']};
     font-weight: 600;
   `,
 
@@ -37,7 +37,7 @@ export default {
       left: 0;
       width: 100%;
       height: 100vh;
-      background: ${colors["azul-escuro/fourth-base"]};
+      background: ${colors['azul-escuro/fourth-base']};
       z-index: 9999;
       display: flex;
       transform: translateY(-100%);
@@ -53,7 +53,6 @@ export default {
     column-gap: 2.8rem;
 
     a {
-      color: ${colors["cinza/neutral"]};
       font-weight: 550;
       font-size: 1rem;
       text-decoration: none;
@@ -62,11 +61,7 @@ export default {
       outline: none;
 
       &:hover {
-        color: ${colors["verde-claro"]};
-      }
-
-      &:first-child {
-        color: ${colors["verde-claro"]};
+        color: ${colors['verde-claro']};
       }
     }
 
@@ -81,6 +76,16 @@ export default {
       justify-content: center;
     }
   `,
+  NavItem: styled.span`
+    font-weight: 550;
+    font-size: 1rem;
+    color: ${({ active }) =>
+      active ? colors['verde-claro'] : colors['cinza/neutral']};
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: ${colors['verde-claro']};
+    }
+  `,
   CloseButton: styled.button`
     width: max-content;
     height: max-content;
@@ -89,7 +94,7 @@ export default {
 
     i {
       font-size: ${space[4]}px;
-      color: ${colors["white/neutral-0"]};
+      color: ${colors['white/neutral-0']};
     }
 
     @media only screen and (max-width: 992px) {
@@ -119,27 +124,27 @@ export default {
     padding: 0;
     border: 0;
     margin: 0;
-    color: ${colors["verde-claro"]};
+    color: ${colors['verde-claro']};
     position: relative;
     font-weight: 550;
     cursor: pointer;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 40%;
       left: -20px;
       width: 1px;
       height: 14px;
-      background: ${colors["cinza/neutral"]};
-      color: ${colors["cinza/neutral"]};
+      background: ${colors['cinza/neutral']};
+      color: ${colors['cinza/neutral']};
     }
     &:hover {
       opacity: 0.9;
     }
   `,
   IconPhone: styled.i`
-    color: ${colors["cinza/neutral"]};
+    color: ${colors['cinza/neutral']};
   `,
   HeaderShrink: styled.div`
     position: sticky;
@@ -149,7 +154,7 @@ export default {
     height: 80px;
     line-height: 80px;
     box-sizing: border-box;
-    box-shadow: ${space[1]}px ${space[1]}px ${space[2]}px -${space[1]}px ${colors["verde-escuro"]};
+    box-shadow: ${space[1]}px ${space[1]}px ${space[2]}px -${space[1]}px ${colors['verde-escuro']};
     z-index: 9999;
   `,
   MobileMenu: styled.span`
@@ -157,7 +162,7 @@ export default {
 
     i {
       font-size: 1.3rem;
-      color: ${colors["white/neutral-0"]};
+      color: ${colors['white/neutral-0']};
       cursor: pointer;
     }
 

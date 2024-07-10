@@ -8,8 +8,7 @@ import { categories } from './data';
 import S, { skeletonTitle, skeletonThumb } from './styles';
 
 function Blog() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
+  const router = useRouter();
   const BLOG_ID = process.env.NEXT_BLOG_ID; // Seu Blog ID
   const API_KEY = process.env.NEXT_API_KEY_BLOGGER; // Sua chave de API
   const POSTS_API_URL = `https://www.googleapis.com/blogger/v3/blogs/${BLOG_ID}/posts?key=${API_KEY}`;
@@ -17,11 +16,13 @@ function Blog() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Estado para controlar o carregamento
 
-  const router = useRouter();
-
   const redirectToPost = (postId) => {
     router.push(`/blog/${postId}`);
   };
+
+  useEffect(() => {
+    document.title = 'Dev.Julio - Blog';
+  }, []);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,6 +32,7 @@ function Blog() {
         const data = await response.json();
         setPosts(data.items);
       } catch (error) {
+        setIsLoading(false); // Finaliza o carregamento
         console.error('Erro ao buscar posts do Blogger:', error);
       } finally {
         setIsLoading(false); // Finaliza o carregamento
@@ -82,11 +84,11 @@ function Blog() {
         {isLoading && (
           <>
             {Array.from({ length: 6 }, (_, index) => (
-              <div style={{ display: 'block' }}>
+              <S.PostCard key={index}>
                 <Skeleton style={skeletonThumb} />
 
                 <Skeleton style={skeletonTitle} />
-              </div>
+              </S.PostCard>
             ))}
           </>
         )}
