@@ -85,11 +85,11 @@ const Header = () => {
               <S.NavRight>
                 <S.Phone
                   className="d-flex align-items-center gap-2 mb-0"
-                  href="https://bit.ly/ContatoJulioFilho"
+                  href="https://wa.me/5512981735112"
                   target="_blank"
                 >
                   <S.IconPhone className="ri-phone-line"></S.IconPhone>+55
-                  (12)99745-4645
+                  (12)98173-5112
                 </S.Phone>
               </S.NavRight>
             </S.NavMenu>

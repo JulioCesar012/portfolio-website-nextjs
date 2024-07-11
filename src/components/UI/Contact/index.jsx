@@ -30,11 +30,11 @@ const Contact = ({ description_contact }) => {
                   <S.InfoContact>devjuliofilho@gmail.com</S.InfoContact>
                 </S.Icon>
 
-                <S.Icon href="https://wa.me/5512997454645" target="__blank">
+                <S.Icon href="https://wa.me/5512981735112" target="__blank">
                   <S.ContentIcons>
                     <i className="ri-phone-line"></i>
                   </S.ContentIcons>
-                  <S.InfoContact>+55 (12)99745-4645</S.InfoContact>
+                  <S.InfoContact>+55 (12)98173-5112</S.InfoContact>
                 </S.Icon>
               </S.ContactIcons>
 
