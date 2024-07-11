@@ -4,19 +4,19 @@ export const NAV_LINK = [
       display: "Home",
     },
     {
-      path: "#about",
+      path: "/#about",
       display: "About",
     },
     {
-      path: "#portfolio",
+      path: "/#portfolio",
       display: "Portfolio",
     },
     {
-      path: "#feedbacks",
-      display: "Feedbacks",
+      path: "/#study",
+      display: "Study",
     },
     {
-      path: "#contact",
+      path: "/#contact",
       display: "Contact",
     },
   ];

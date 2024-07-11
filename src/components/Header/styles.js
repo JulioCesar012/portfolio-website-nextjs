@@ -85,6 +85,7 @@ export default {
     &:hover {
       color: ${colors['verde-claro']};
     }
+    cursor: pointer;
   `,
   CloseButton: styled.button`
     width: max-content;
