@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Container } from 'reactstrap';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import S from './styles';
 
@@ -24,7 +25,6 @@ const NAV_LINK = [
   },
   {
     path: '/blog',
-    // path: "https://medium.com/@juliofilho12",
     display: 'Blog',
   },
   {
@@ -34,9 +34,18 @@ const NAV_LINK = [
 ];
 
 const Header = () => {
-  const router = useRouter(); // Obtém o objeto router do Next.js
+  const router = useRouter();
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+  const [activePath, setActivePath] = useState(router.asPath);
+
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, []);
+
+  useEffect(() => {
+    setActivePath(router.asPath);
+  }, [router.asPath]);
 
   const headerFunc = () => {
     if (
@@ -44,18 +53,44 @@ const Header = () => {
       document.documentElement.scrollTop > 80
     ) {
       headerRef.current.classList.add('header_shrink');
-      return;
+    } else {
+      headerRef.current.classList.remove('header_shrink');
     }
-    return headerRef.current.classList.remove('header_shrink');
   };
 
   useEffect(() => {
     window.addEventListener('scroll', headerFunc);
-
     return () => window.removeEventListener('scroll', headerFunc);
   }, []);
 
   const toggleMenu = () => menuRef.current.classList.toggle('active_menu');
+
+  const handleScroll = (targetId) => {
+    console.log('targetId', targetId);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handleMenuClick = (e, path) => {
+    e.preventDefault();
+    const isBlogPage = router.pathname === '/blog';
+
+    console.log('path menu click', path);
+    console.log('path.startsWith', path.startsWith('/#'));
+    if (path.startsWith('/#') && !isBlogPage) {
+      handleScroll(path.substring(2)); // Remove '/#' (2 caracteres)
+    } else {
+      router.push(path);
+    }
+
+    setActivePath(path);
+    toggleMenu();
+  };
 
   return (
     <S.Header ref={headerRef}>
@@ -73,12 +108,16 @@ const Header = () => {
             </S.CloseButton>
             <S.NavMenu onClick={toggleMenu}>
               {NAV_LINK.map((item, index) => {
-                const isActive = router.asPath === item.path;
+                const isActive = activePath === item.path;
 
                 return (
-                  <Link href={`${item.path}`} key={index}>
+                  <a
+                    href={`${item.path}`}
+                    key={index}
+                    onClick={(e) => handleMenuClick(e, item.path)}
+                  >
                     <S.NavItem active={isActive}>{item.display}</S.NavItem>
-                  </Link>
+                  </a>
                 );
               })}
 

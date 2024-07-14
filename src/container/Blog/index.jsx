@@ -55,6 +55,8 @@ function Blog() {
     }
     return { truncated: true, text: text.slice(0, maxLength) + '...' };
   };
+  
+  const notHasPosts = !isLoading && !posts?.length;
 
   return (
     <Container>
@@ -80,7 +82,7 @@ function Blog() {
         <S.TitlePosts>Meus Artigos</S.TitlePosts>
       </S.HeaderCategory>
 
-      <S.Content>
+      <S.Content style={{ justifyContent: notHasPosts && 'center', paddingTop: notHasPosts && '0px' }}>
         {isLoading && (
           <>
             {Array.from({ length: 6 }, (_, index) => (
@@ -91,6 +93,15 @@ function Blog() {
               </S.PostCard>
             ))}
           </>
+        )}
+
+        {!isLoading && !posts?.length && (
+          <S.NotFoundPost>
+            <img src={'/images/logo_site.png'} alt="Dev. Julio" />
+            <h2>Nenhum artigo publicado</h2>
+
+            <a href={'/'}>Volte para a página principal</a>
+          </S.NotFoundPost>
         )}
 
         {!isLoading &&

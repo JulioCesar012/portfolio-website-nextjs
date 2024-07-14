@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import styled from 'styled-components';
 import { colors, space } from '~/styles';
 
@@ -30,7 +29,6 @@ export default {
   `,
 
   Navigation: styled.div`
-    /* ====== responsividade ===== */
     @media only screen and (max-width: 992px) {
       position: fixed;
       top: 0;
@@ -65,7 +63,6 @@ export default {
       }
     }
 
-    /* ====== responsividade ===== */
     @media only screen and (max-width: 992px) {
       position: absolute;
       top: 0;
@@ -116,7 +113,6 @@ export default {
     display: flex;
     align-items: center;
 
-    /* ====== responsividade ===== */
     @media only screen and (max-width: 992px) {
       display: none;
     }

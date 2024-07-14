@@ -118,7 +118,7 @@ export default {
     max-height: 224px;
 
     &:hover {
-      border: 4px solid ${colors['verde-claro']}
+      border: 4px solid ${colors['verde-claro']};
     }
   `,
   PreviewContent: styled.div``,
@@ -126,6 +126,44 @@ export default {
   Avatar: styled.img``,
   NameAuthor: styled.h4``,
   PublishedIn: styled.div``,
+  NotFoundPost: styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      text-align: center;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 0.5px solid ${colors['background-azul/primary-base']};
+      background: ${colors['verde-claro']};
+      color: ${colors['background-azul/primary-base']};
+      font-weight: 450;
+      font-style: normal;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  `,
 };
 
 export const skeletonThumb = {
