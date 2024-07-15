@@ -59,6 +59,7 @@ function MyApp({ Component, pageProps }) {
           content="https://yourdomain.com/icons/apple-touch-icon.png"
         />
         <meta name="monetag" content="5062c6e81a45694c5ac8c11b697ad352" />
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="79405" async data-cfasync="false"></script>
         <title>Developer Julio</title>
       </Head>
       <GlobalStyle />
