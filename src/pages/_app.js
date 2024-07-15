@@ -69,8 +69,7 @@ function MyApp({ Component, pageProps }) {
         <title>Developer Julio</title>
       </Head>
       <body>
-      <script src="https://yonhelioliskor.com/act/files/tag.min.js?z=7732221" data-cfasync="false" async></script>
-      </body>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7732223"></script>      </body>
       <GlobalStyle />
       <Component {...pageProps} />
     </Layout>
