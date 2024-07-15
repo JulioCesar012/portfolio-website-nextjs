@@ -58,6 +58,7 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content="https://yourdomain.com/icons/apple-touch-icon.png"
         />
+        <meta name="monetag" content="5062c6e81a45694c5ac8c11b697ad352" />
         <title>Developer Julio</title>
       </Head>
       <GlobalStyle />
