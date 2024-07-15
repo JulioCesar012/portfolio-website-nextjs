@@ -69,12 +69,7 @@ function MyApp({ Component, pageProps }) {
         <title>Developer Julio</title>
       </Head>
       <body>
-        <script
-          src="https://alwingulla.com/88/tag.min.js"
-          data-zone="79405"
-          async
-          data-cfasync="false"
-        ></script>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=7732197"></script>
       </body>
       <GlobalStyle />
       <Component {...pageProps} />
