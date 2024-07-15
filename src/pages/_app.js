@@ -1,14 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "remixicon/fonts/remixicon.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'remixicon/fonts/remixicon.css';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import 'react-loading-skeleton/dist/skeleton.css';
-import Layout from "~/components/Layout";
+import Layout from '~/components/Layout';
 
-import "~/styles/_fonts.css";
-import GlobalStyle from "~/styles/Global";
-import Head from "next/head";
+import '~/styles/_fonts.css';
+import GlobalStyle from '~/styles/Global';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -43,7 +43,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="https://yourdomain.com" />
         <meta name="twitter:title" content="Dev. Julio" />
-        <meta name="twitter:description" content="Best Dev. Julio in the world" />
+        <meta
+          name="twitter:description"
+          content="Best Dev. Julio in the world"
+        />
         <meta
           name="twitter:image"
           content="https://yourdomain.com/icons/android-chrome-192x192.png"
@@ -51,7 +54,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:creator" content="@DavidWShadow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dev. Julio" />
-        <meta property="og:description" content="Best Dev. Julio in the world" />
+        <meta
+          property="og:description"
+          content="Best Dev. Julio in the world"
+        />
         <meta property="og:site_name" content="Dev. Julio" />
         <meta property="og:url" content="https://yourdomain.com" />
         <meta
@@ -59,9 +65,17 @@ function MyApp({ Component, pageProps }) {
           content="https://yourdomain.com/icons/apple-touch-icon.png"
         />
         <meta name="monetag" content="5062c6e81a45694c5ac8c11b697ad352" />
-        <script src="https://alwingulla.com/88/tag.min.js" data-zone="79405" async data-cfasync="false" />
+
         <title>Developer Julio</title>
       </Head>
+      <body>
+        <script
+          src="https://alwingulla.com/88/tag.min.js"
+          data-zone="79405"
+          async
+          data-cfasync="false"
+        ></script>
+      </body>
       <GlobalStyle />
       <Component {...pageProps} />
     </Layout>
