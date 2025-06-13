@@ -23,7 +23,7 @@ const portfolio = [
     img: "/images/portfolio-02.jpg",
     category: "Web App",
     keyword: ["React", "GraphQL", "Ant Design", "Clean Code"],
-    liveUrl: "https://site.autodoc.com.br/conaz",
+    liveUrl: "https://portal.conazweb.com.br",
     preview: null,
   },
 
@@ -33,7 +33,7 @@ const portfolio = [
     img: "/images/portfolio-04.png",
     category: "Web App",
     keyword: ["Microfrontend", "ERP", "Ant Design"],
-    liveUrl: "https://site.autodoc.com.br/eva",
+    liveUrl: "https://autodoc.com.br/eva",
     preview: null,
   },
 
