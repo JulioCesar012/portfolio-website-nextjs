@@ -22,7 +22,7 @@ const Home = () => {
   const pathNavMenu = router?.asPath?.replace('/', '')?.replace('#', '') || '';
 
   useEffect(() => {
-    document.title = `Dev.Julio - ${pathNavMenu?.charAt(0)?.toUpperCase() + pathNavMenu?.slice(1)}`;
+    document.title = `Dev.Julio ${pathNavMenu ? '- ' + pathNavMenu?.charAt(0)?.toUpperCase() + pathNavMenu?.slice(1) : ''}`;
   }, [])
 
   return (

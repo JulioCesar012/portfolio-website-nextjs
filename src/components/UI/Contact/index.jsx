@@ -39,7 +39,7 @@ const Contact = ({ description_contact }) => {
               </S.ContactIcons>
 
               <S.SocialLinks>
-                <Link href="https://www.youtube.com/channel/UCTO59tBT7YNak726ZvwZXew"><i className="ri-youtube-line"></i></Link>
+                {/* <Link href="https://www.youtube.com/channel/UCTO59tBT7YNak726ZvwZXew"><i className="ri-youtube-line"></i></Link> */}
                 <Link href="https://github.com/JulioCesar012"><i className="ri-github-line"></i></Link>
                 <Link href="https://www.linkedin.com/in/julio-cesar-filho-759653171"><i className="ri-linkedin-line"></i></Link>
                 <Link href="https://discord.com/users/JulioCesar#9949"><i className="ri-discord-line"></i></Link>
